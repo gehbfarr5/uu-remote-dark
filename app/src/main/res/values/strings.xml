@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UU 远程深色模式</string>
+    <string name="app_description">仅为网易 UU 远程 Android 客户端提供应用内深色模式。</string>
+    <string name="theme_title">外观</string>
+    <string name="theme_follow_system">跟随系统</string>
+    <string name="theme_dark">深色模式</string>
+    <string name="theme_service_waiting">正在连接 LSPosed 配置服务…</string>
+    <string name="theme_service_unavailable">LSPosed 配置服务不可用，请确认模块已启用。</string>
+    <string name="module_status_title">模块状态</string>
+    <string name="module_status_scope">作用域：网易 UU 远程</string>
+    <string name="module_status_note">主题开关应从 UU 远程的“设置 → 外观”进入。</string>
+    <string name="module_status_framework_unknown">尚未连接到 LSPosed</string>
+    <string name="module_status_framework">%1$s API %2$d</string>
+    <string name="module_open_chooser">打开主题选择</string>
+    <string name="theme_unsupported">当前 UU 版本尚未建立兼容适配，主题未修改。</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uu_dark_background">#111114</color>
+    <color name="uu_dark_surface">#18181C</color>
+    <color name="uu_dark_surface_elevated">#222228</color>
+    <color name="uu_dark_primary_text">#F2F3F5</color>
+    <color name="uu_dark_secondary_text">#A8ADB7</color>
+    <color name="uu_dark_divider">#2D2F36</color>
+    <color name="uu_brand_blue">#3A7BFC</color>
+</resources>
