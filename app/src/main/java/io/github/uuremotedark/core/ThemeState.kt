@@ -59,7 +59,17 @@ class ThemeState(
     }
 
     fun updateSystemUiMode(newUiMode: Int) {
+        if (uiMode == newUiMode) return
         uiMode = newUiMode
+        publish()
+    }
+
+    /** Update the selected mode immediately, before the remote preference
+     * callback is delivered. This keeps an in-app settings control visually
+     * synchronous while the persisted value is written in parallel. */
+    fun setMode(newMode: ThemeMode) {
+        if (mode == newMode) return
+        mode = newMode
         publish()
     }
 
