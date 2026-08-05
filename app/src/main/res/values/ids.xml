@@ -1,0 +1,5 @@
+<resources>
+    <item name="settings_mode_listener" type="id" />
+    <item name="settings_follow_system" type="id" />
+    <item name="settings_dark" type="id" />
+</resources>

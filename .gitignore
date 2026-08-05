@@ -10,6 +10,7 @@ local.properties
 apks/
 decompile/
 evidence/private/
+evidence/**/*.json
 evidence/**/*.png
 evidence/**/*.mp4
 *.apk

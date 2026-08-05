@@ -2,7 +2,7 @@
 
 | Target | Status | Notes |
 |---|---|---|
-| UU Remote 4.35.0 (`435000`) | Adapter in progress | Exact base APK and signing certificate are checked; View/Compose/resource paths still require real-device coverage |
+| UU Remote 4.35.0 (`435000`) | Implemented, real-device verification pending | Exact base APK and signing certificate are checked; early resource, View/Compose, ActivityThread scan and settings-entry paths are implemented |
 | Other UU versions | Refused by gate | Add a reviewed adapter before enabling hooks |
 | Android 16 / API 36 | Development baseline | Compile with SDK 37; use local `PLK110_API_36` emulator for ordinary app/package checks |
 | OnePlus 15 / ColorOS 16 / Vector-SR | Final integration target | Required for LSPosed and OEM behavior |
