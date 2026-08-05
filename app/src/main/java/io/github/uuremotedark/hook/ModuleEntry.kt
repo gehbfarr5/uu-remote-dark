@@ -19,6 +19,11 @@ class ModuleEntry : XposedModule() {
     private val handles = mutableListOf<XposedInterface.HookHandle>()
 
     override fun onModuleLoaded(param: XposedModuleInterface.ModuleLoadedParam) {
+        if (param.processName != TargetInfo.PACKAGE_NAME) {
+            writeLog(Log.DEBUG, TAG, "skip process ${param.processName}")
+            if (apiVersion >= API_102) detach()
+            return
+        }
         Log.i(TAG, "onModuleLoaded process=${param.processName} api=$apiVersion framework=$frameworkName")
         writeLog(Log.INFO, TAG, "loaded framework=$frameworkName version=$frameworkVersion API=$apiVersion")
         EarlyLifecycleBridge.install(this, param.processName)
