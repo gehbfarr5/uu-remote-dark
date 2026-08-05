@@ -36,7 +36,18 @@ UU 的混淆类、Compose 调色板和“我的 → 设置”页面仍需在真�
 
 ## 安装和作用域
 
-安装 APK 后，在 Vector/LSPosed 中只启用 `com.netease.uuremote` 作用域。不要勾选 System Framework、System UI 或其它应用。模块会对 UU 4.35.0 的版本、Base APK SHA-256 和签名证书 SHA-256 做精确门禁，未知构建会保持原界面不变。
+安装 APK 后，建议通过 Vector 的 root CLI 直接启用模块并追加唯一作用域，不需要 UI：
+
+```sh
+adb -s <endpoint> shell su -c \
+  '/data/adb/modules/zygisk_vector/cli modules enable <module_pkg> --json'
+adb -s <endpoint> shell su -c \
+  '/data/adb/modules/zygisk_vector/cli scope add <module_pkg> com.netease.uuremote/0 --json'
+```
+
+随后用 `modules ls --json` 和 `scope ls <module_pkg> --json` 验证模块为
+`enabled` 且只包含 `com.netease.uuremote` 的 user 0 作用域。不要勾选 System
+Framework、System UI 或其它应用。`scope.list` 会随 APK 提供，但不能替代安装后查询；未知 UU 构建会保持原界面不变。
 
 ## 许可
 
